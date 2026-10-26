@@ -1,9 +1,9 @@
 [
   {
-    "display_name": "EXAMPLE",
-    "value": "example",
+    "display_name": "Internet Archive",
+    "value": "internetArchive",
     "version": "1.0",
-    "icon": "",
+    "icon": "https://cdn.jsdelivr.net/gh/Tanzeel0Hussain/vega-providers@main/assets/internetArchive.png",
     "type": "global",
     "hasSettings": true,
     "disabled": false
