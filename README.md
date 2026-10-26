@@ -11,7 +11,8 @@ It uses only Internet Archive's official public APIs ([Advanced Search](https://
 - **Search** by title.
 - **Movies and series:** items that contain several videos (for example a TV season) show up as a series with one entry per episode.
 - **Every available format** is offered as a server (MP4, h.264, Ogg, …) with resolution and size; downloads list the original, highest-quality file first.
-- **Settings:** choose between "Public domain and Creative Commons" (default) or "Public domain only".
+- **Subtitles:** SRT and WebVTT files in an item show up in the player, named by language (`film.en.srt` → English, `film_urdu.vtt` → Urdu). Episodes only get their own subtitles, and Internet Archive's speech-recognition captions are labelled "Automatic captions". Empty files and duplicate SRT/VTT copies are skipped.
+- **Settings:** choose between "Public domain and Creative Commons" (default) or "Public domain only", and sort lists by most popular (default), recently added or highest rated.
 
 Only items whose license on Internet Archive is marked public domain or Creative Commons are shown.
 
@@ -27,6 +28,7 @@ Only items whose license on Internet Archive is marked public domain or Creative
 npm install
 npm run build                       # bundle providers into dist/
 npm run test -- internetArchive     # end-to-end test against the live API
+npm run test:unit                   # offline tests (no network needed)
 npm run dev                         # serve the providers locally on port 3001
 ```
 
