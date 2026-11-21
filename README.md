@@ -5,12 +5,18 @@ the provider extensions for the [Vega app](https://github.com/Zenda-Cross/vega-a
 A provider is a small TypeScript module that tells Vega how to browse,
 search and play videos from one website.
 
-My addition is an **Internet Archive provider**. It was accepted upstream in
+My additions are three providers for free and legal video: **Internet Archive**,
+**PeerTube** and **Wikimedia Commons**. Internet Archive was accepted upstream in
 [Zenda-Cross/vega-providers#36](https://github.com/Zenda-Cross/vega-providers/pull/36),
 and its subtitles and sort setting in
 [#37](https://github.com/Zenda-Cross/vega-providers/pull/37), so it ships with
-the default provider source. The same provider is also published on its own in
-[Tanzeel0Hussain/vega-providers](https://github.com/Tanzeel0Hussain/vega-providers).
+the default provider source.
+
+This repository is published as
+[Tanzeel0Hussain/vega-providers](https://github.com/Tanzeel0Hussain/vega-providers),
+so typing `Tanzeel0Hussain` as a provider source in Vega loads all of the
+providers here. The earlier repository that held only my own three providers is
+now [vega-providers-old](https://github.com/Tanzeel0Hussain/vega-providers-old).
 
 ## Internet Archive provider
 
@@ -40,26 +46,51 @@ What it does:
 It uses the official Internet Archive search and metadata APIs, not page
 scraping, so it does not break when the website's layout changes.
 
+## PeerTube provider
+
+[PeerTube](https://joinpeertube.org) is a federated, open-source video platform.
+Every server exposes the same public API, so one provider reads from any of them.
+
+- **Home screen rows:** Trending, Most Viewed, Recently Added, Films, Animation &
+  Kids, Education, and Science & Technology.
+- **Genres:** Films, Comedy, Entertainment, Education, Science & Technology,
+  Kids, Music and Art.
+- **Settings:** the PeerTube server to use (default `https://framatube.org`),
+  "Public domain and Creative Commons" or "Public domain (CC0) only", and the
+  default order.
+- **Playback:** adaptive HLS streaming first, then MP4 files with the best
+  resolution first.
+
+## Wikimedia Commons provider
+
+[Wikimedia Commons](https://commons.wikimedia.org) holds only freely licensed
+media. The provider uses its official MediaWiki API.
+
+- **Home screen rows:** Featured Videos, Short Films, Animation, Documentaries,
+  Nature & Wildlife, Science & Space and History.
+- **Genres:** Animation, Documentary, Nature, Animals, Space, Science, Music and
+  Travel.
+- **Settings:** "Public domain and Creative Commons" or "Public domain only", and
+  the order of lists and search results.
+- **Playback:** MP4 and WebM transcodes for streaming, and the original upload
+  for downloads. SRT and WebVTT subtitles show up in the player.
+
 ## Use it in the Vega app
 
-Internet Archive is in the default provider source now, so once Vega has
-refreshed its provider list:
-
 1. Open Vega and go to **Settings → Provider Manager**.
-2. Select **Internet Archive** as the provider.
+2. Press the + button, type `Tanzeel0Hussain` and add the source.
+3. Install the providers you want, then select one.
 
-You can also add a provider source (Provider Manager → the + button) and type
-`Tanzeel0Hussain`. That loads
-[Tanzeel0Hussain/vega-providers](https://github.com/Tanzeel0Hussain/vega-providers),
-which carries the same provider on its own.
+Internet Archive is also in the default provider source, so it is there without
+adding anything.
 
 ## Run and test it on a computer
 
 You need Node.js 18 or newer.
 
 ```bash
-git clone https://github.com/Tanzeel0Hussain/zenda-vega-providers.git
-cd zenda-vega-providers
+git clone https://github.com/Tanzeel0Hussain/vega-providers.git
+cd vega-providers
 npm install
 npm run build              # compiles providers/ into dist/
 npm run test:unit          # offline tests, no network needed
