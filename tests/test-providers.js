@@ -209,10 +209,14 @@ class ProviderTester {
 
       const rawCatalog = catalogModule.catalog;
       const catalog =
-        typeof rawCatalog === "function" ? await rawCatalog() : rawCatalog || [];
+        typeof rawCatalog === "function"
+          ? await rawCatalog({ providerContext })
+          : rawCatalog || [];
       const rawGenres = catalogModule.genres;
       const genres =
-        typeof rawGenres === "function" ? await rawGenres() : rawGenres || [];
+        typeof rawGenres === "function"
+          ? await rawGenres({ providerContext })
+          : rawGenres || [];
 
       const catalogOutput = {
         catalog,
