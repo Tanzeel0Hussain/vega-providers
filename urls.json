@@ -5,7 +5,7 @@
   },
   "Topmovies": {
     "name": "Topmovies",
-    "url": "https://moviesleech.club"
+    "url": "https://moviesleech.help"
   },
   "UhdMovies": {
     "name": "UhdMovies",
@@ -190,5 +190,25 @@
   "asianc": {
     "name": "AsianC",
     "url": "https://asianc.id"
+  },
+  "RareAnimes": {
+    "name": "RareAnimes",
+    "url": "https://www.rareanimes.foo"
+  },
+  "durbinLive": {
+    "name": "DurbinLive",
+    "url": "https://durbinlive.live"
+  },
+  "liveTgTv": {
+    "name": "LiveTG TV",
+    "url": "https://livetgtv.lovable.app"
+  },
+  "aniDream": {
+    "name": "AniDream",
+    "url": "https://anidream.to"
+  },
+  "ExtraFlix": {
+    "name": "ExtraFlix",
+    "url": "https://e14.extraflix.mobi"
   }
 }
