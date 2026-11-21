@@ -395,7 +395,7 @@
     "version": "1.20",
     "icon": "https://cdn.jsdelivr.net/gh/Zenda-Cross/vega-providers@main/assets/Joya9tv.png",
     "type": "india",
-    "disabled": true,
+    "disabled": false,
     "hasSettings": true
   },
   {
@@ -404,7 +404,7 @@
     "version": "1.2",
     "icon": "",
     "type": "english",
-    "disabled": true
+    "disabled": false
   },
   {
     "display_name": "Torrentio",
